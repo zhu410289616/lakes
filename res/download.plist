@@ -33,7 +33,7 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.pig.test.Example</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
+                <string>com.zrh.demo.IESLiveIM-Example</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
                 <key>bundle-version</key>
                 <string>1.0.0</string>
                 <key>kind</key>
