@@ -11,7 +11,7 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>http://192.168.1.103:20227/download?path=%2F11.ipa</string>          <!-- ipa的http地址 -->
+                    <string>http://192.168.1.103:20227/download?path=%2FExample.ipa</string>          <!-- ipa的http地址 -->
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -33,9 +33,9 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>com.zrh.demo.IESLiveIM-Example</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
+                <string>cn.migu.moa</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
                 <key>bundle-version</key>
-                <string>1.0.0</string>
+                <string>1.0</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
