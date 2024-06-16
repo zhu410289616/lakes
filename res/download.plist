@@ -33,13 +33,13 @@
             <key>metadata</key>
             <dict>
                 <key>bundle-identifier</key>
-                <string>cn.migu.moa</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
+                <string>com.zrh.FunOnline.2018</string>        <!-- 游戏的bundleId, 比如com.linxinfa.mygame -->
                 <key>bundle-version</key>
                 <string>1.0</string>
                 <key>kind</key>
                 <string>software</string>
                 <key>title</key>
-                <string>Example</string>    <!-- 游戏名字 -->
+                <string>FunOnline</string>    <!-- 游戏名字 -->
             </dict>
         </dict>
     </array>
