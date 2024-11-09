@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  a {
+    text-decoration: none; /* 去掉超链接的下划线 */
+    color: inherit; /* 保持文字颜色与父元素一致 */
+  }
+  .favorite-item {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* 添加hover效果 */
+  }
+  .favorite-item:hover {
+    transform: translateY(-5px); /* 鼠标悬停时上移 */
+  }
+  .favorite-item img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover; /* Cover the box */
+  }
+  .favorite-item div {
+    padding: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .favorite-item {
+      width: 35%;
+      margin: 5%;
+    }
+    .container {
+      padding: 10px;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container" id="favoritesContainer"></div>
+
+<script>
+// 示例数据，你可以替换成从服务器获取的数据
+const defaultIconUrl = "https://zhu410289616.github.io/lakes/juice/website_icon_default.png";
+const favorites = [
+  { url: "https://www.google.com", imageUrl: defaultIconUrl, name: "Google" },
+  { url: "https://www.bing.com", imageUrl: defaultIconUrl, name: "Bing" },
+  { url: "https://www.baidu.com", imageUrl: defaultIconUrl, name: "baidu" },
+  { url: "https://www.bilibili.com", imageUrl: defaultIconUrl, name: "哔哩哔哩" },
+  { url: "https://github.com", imageUrl: defaultIconUrl, name: "Github" },
+  { url: "https://zhu410289616.github.io/", imageUrl: defaultIconUrl, name: "Blog" },
+];
+
+function renderFavorites() {
+  const container = document.getElementById('favoritesContainer');
+  container.innerHTML = ''; // 清空容器
+
+  favorites.forEach(favorite => {
+    const anchor = document.createElement('a');
+    anchor.href = favorite.url;
+    anchor.className = 'favorite-item';
+    anchor.target = '_blank';
+
+    const image = document.createElement('img');
+    image.src = favorite.imageUrl;
+    image.alt = 'Site Image';
+
+    const div = document.createElement('div');
+    div.textContent = favorite.name;
+
+    anchor.appendChild(image);
+    anchor.appendChild(div);
+    container.appendChild(anchor);
+  });
+}
+renderFavorites();
+</script>
+</body>
+</html>
